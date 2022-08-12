@@ -41,8 +41,9 @@ function Login() {
                 password: Password
             })
         })
-        if (user) {
-            navigate('/home', { l: "yes" });
+        const data = await user.json();
+        if (data) {
+            navigate('/home', { state: data });
         }
     }
     return (
