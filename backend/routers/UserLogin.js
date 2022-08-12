@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     User.findOne({ username: Username }, (err, user) => {
         if (user) {
             if (Password == user.password) {
-                console.log("true");
+                res.send(user);
             }
         }
     })
