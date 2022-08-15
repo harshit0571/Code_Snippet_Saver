@@ -8,7 +8,7 @@ const port = 5000;
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send("the backend is running in sync")
+    res.send("the backend is running in sync test 2 passed")
 })
 
 const userRoutes = require('./routers/UserRoutes.js');
