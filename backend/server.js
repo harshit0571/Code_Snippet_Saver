@@ -13,6 +13,10 @@ app.use('/user', userRoutes);
 const userLogin = require('./routers/UserLogin.js');
 app.use('/login', userLogin);
 
+const Post = require('./routers/PostRoutes.js');
+app.use('/post', Post);
+
+
 app.listen(port, () => {
     console.log("working")
 })

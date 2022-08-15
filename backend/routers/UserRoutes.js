@@ -2,9 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user.model');
 
-router.get('/', (req, res) => {
-    res.send("hello")
-})
+
 
 router.post('/', async (req, res) => {
     const NewUser = new User({
@@ -20,5 +18,7 @@ router.post('/', async (req, res) => {
         res.status(400).json({ message: err.message })
     }
 })
+
+
 
 module.exports = router;
